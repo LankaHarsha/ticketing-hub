@@ -6,7 +6,7 @@ deploy:
       - infra/k8s/*
 build:
   artifacts:
-    - image: lharsha4/auth
+    - image: us.gcr.io/ticketing-dev-402413/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -14,5 +14,8 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-  local:
-    push: false
+  # local:
+  #   push: false
+  GoogleCloudBuild:
+    projectId: ticketing-dev-402413
+    diskSizeGb: 100
