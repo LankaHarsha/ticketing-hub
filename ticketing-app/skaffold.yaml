@@ -16,6 +16,5 @@ build:
             dest: .
   # local:
   #   push: false
-  GoogleCloudBuild:
+  googleCloudBuild:
     projectId: ticketing-dev-402413
-    diskSizeGb: 100
